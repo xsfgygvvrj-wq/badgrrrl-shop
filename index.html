@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MEI - BADGRRRL SHOP</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: black;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+    background: linear-gradient(90deg, #ff00ff, #6a0dad);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    border-bottom: 1px solid #ff00ff;
+    padding-bottom: 5px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+}
+
+/* Photocard */
+.photocard {
+    background: white;
+    padding: 5px;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+}
+
+.photocard img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Polaroid */
+.polaroid {
+    background: white;
+    padding: 10px;
+    color: black;
+    text-align: center;
+}
+
+.polaroid img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+/* Merch */
+.card {
+    background: #111;
+    border: 1px solid #ff00ff;
+    padding: 10px;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+button {
+    margin-top: 5px;
+    padding: 6px;
+    border: none;
+    background: #ff00ff;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+}
+
+.price {
+    color: #ff00ff;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div>MEI – BADGRRRL</div>
+    <div>🛒 <span id="cart">0</span></div>
+</header>
+
+<script>
+let cart = 0;
+function addToCart(){
+    cart++;
+    document.getElementById("cart").innerText = cart;
+}
+</script>
+
+<section>
+<h2>Photocards</h2>
+<div class="grid">
+    <div class="photocard"><img src="https://i.postimg.cc/pmZk9Hcp/IMG-1114.jpg"><p>$8</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.postimg.cc/1g3Bwjbz/IMG-1129.jpg"><p>$9</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.postimg.cc/qtvwy5WC/IMG-1130.jpg"><p>$9</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.postimg.cc/yJ8jcb2D/IMG-1131.jpg"><p>$10</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.postimg.cc/nsh2BPNs/IMG-1132.jpg"><p>$10</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.postimg.cc/KK8fBHCt/IMG-1133.jpg"><p>$8</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.postimg.cc/06ynDBhC/IMG-1134.jpg"><p>$8</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.postimg.cc/mcgjC5KX/IMG-1135.jpg"><p>$9</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.postimg.cc/KK8fBHCp/IMG-1144.jpg"><p>$9</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.postimg.cc/1g7HHKZH/IMG-1145.jpg"><p>$10</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.postimg.cc/FfCZZxQ2/IMG-1147.jpg"><p>$10</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.postimg.cc/Y4D33xHB/IMG-1152.jpg"><p>$11</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.postimg.cc/gwtDDKWY/IMG-1153.jpg"><p>$11</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.postimg.cc/06XffCs5/IMG-1154.jpg"><p>$11</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.postimg.cc/cKkmmcSL/IMG-1155.jpg"><p>$11</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.postimg.cc/G8BjSsL8/IMG-1165.jpg"><p>$12</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.postimg.cc/G8BjSsL0/IMG-1166.jpg"><p>$12</p><button onclick="addToCart()">Add</button></div>
+</div>
+</section>
+
+<section>
+<h2>Polaroids</h2>
+<div class="grid">
+    <div class="polaroid"><img src="https://i.postimg.cc/T1S05Q0t/IMG-1128.jpg"><p>Jennie & Mei</p><p>$18</p><button onclick="addToCart()">Add</button></div>
+    <div class="polaroid"><img src="https://i.postimg.cc/cH0bdDk0/IMG-1146.jpg"><p>Lisa & Mei</p><p>$20</p><button onclick="addToCart()">Add</button></div>
+    <div class="polaroid"><img src="https://i.postimg.cc/Bt9DGzNw/IMG-1150.jpg"><p>Winter & Mei</p><p>$18</p><button onclick="addToCart()">Add</button></div>
+    <div class="polaroid"><img src="https://i.postimg.cc/j5DZxG61/IMG-1149.jpg"><p>Sana & Mei</p><p>$19</p><button onclick="addToCart()">Add</button></div>
+    <div class="polaroid"><img src="https://i.postimg.cc/FKBVBTt3/IMG-1156.jpg"><p>Suga & Mei</p><p>$22</p><button onclick="addToCart()">Add</button></div>
+    <div class="polaroid"><img src="https://i.postimg.cc/HkSwr6L5/IMG-1157.jpg"><p>Han & Mei</p><p>$19</p><button onclick="addToCart()">Add</button></div>
+    <div class="polaroid"><img src="https://i.postimg.cc/f3MzKxvg/IMG-1159.jpg"><p>Mei Solo</p><p>$15</p><button onclick="addToCart()">Add</button></div>
+    <div class="polaroid"><img src="https://i.postimg.cc/5Hpxk6Ph/IMG-1160.jpg"><p>Mei Solo</p><p>$15</p><button onclick="addToCart()">Add</button></div>
+    <div class="polaroid"><img src="https://i.postimg.cc/xkg0Fcxj/IMG-1161.jpg"><p>Mei Solo</p><p>$15</p><button onclick="addToCart()">Add</button></div>
+    <div class="polaroid"><img src="https://i.postimg.cc/f35wgJ2D/IMG-1167.jpg"><p>Mei Solo</p><p>$16</p><button onclick="addToCart()">Add</button></div>
+    <div class="polaroid"><img src="https://i.postimg.cc/MctWrvPW/IMG-1168.jpg"><p>Mei Solo</p><p>$16</p><button onclick="addToCart()">Add</button></div>
+</div>
+</section>
+
+<section>
+<h2>Official Merch</h2>
+<div class="grid">
+    <div class="card"><img src="https://i.postimg.cc/bJ6cWcyF/Untitled49-20260426012940.png"><p>Badgrrrl Beanie</p><p class="price">$25</p><button onclick="addToCart()">Add</button></div>
+    <div class="card"><img src="https://i.postimg.cc/j5qYMdbX/Untitled49-20260426012807.png"><p>I AM ART Tshirt</p><p class="price">$35</p><button onclick="addToCart()">Add</button></div>
+    <div class="card"><img src="https://i.postimg.cc/NMNqSqGQ/IMG-1116.jpg"><p>Official Keychain</p><p class="price">$15</p><button onclick="addToCart()">Add</button></div>
+    <div class="card"><img src="https://i.postimg.cc/RhN5zsqV/IMG-1115.jpg"><p>Eyewear & Case</p><p class="price">$45</p><button onclick="addToCart()">Add</button></div>
+    <div class="card"><img src="https://i.postimg.cc/PrKpyKwd/Untitled48-20260426012957.jpg"><p>BADGRRRL Album (Double Side)</p><p class="price">$30</p><button onclick="addToCart()">Add</button></div>
+    <div class="card"><img src="https://i.postimg.cc/kg4Vp8QD/Untitled48-20260426012957.jpg"><p>Official Photobook</p><p class="price">$25</p><button onclick="addToCart()">Add</button></div>
+    <div class="card"><img src="https://i.postimg.cc/vZB1N9rY/Untitled48-20260426012957.jpg"><p>Limited Poster</p><p class="price">$15</p><button onclick="addToCart()">Add</button></div>
+</div>
+</section>
+
+</body>
+</html>
