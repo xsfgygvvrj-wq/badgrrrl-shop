@@ -1,124 +1,170 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BADGRRRL - MEI OFFICIAL SHOP</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Space+Mono&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-color: #0a0a0a;
-            --card-bg: #141414;
-            --accent-color: #ff0055;
-            --text-main: #ffffff;
-            --text-dim: #888888;
-        }
+<meta charset="UTF-8">
+<title>MEI - BADGRRRL SHOP</title>
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Space Mono', monospace;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: black;
+    color: white;
+}
 
-        h1, h2 {
-            font-family: 'Syncopate', sans-serif;
-            text-transform: uppercase;
-            letter-spacing: -1px;
-            text-align: center;
-        }
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+    background: linear-gradient(90deg, #ff00ff, #6a0dad);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        h1 { font-size: 2.2rem; margin-bottom: 10px; border-bottom: 2px solid var(--accent-color); padding-bottom: 10px; }
-        h2 { font-size: 1.2rem; margin: 50px 0 25px; color: var(--accent-color); width: 100%; max-width: 1200px; border-left: 4px solid var(--accent-color); padding-left: 15px; }
+section {
+    padding: 20px;
+}
 
-        .shop-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 25px;
-            width: 100%;
-            max-width: 1200px;
-        }
+h2 {
+    border-bottom: 1px solid #ff00ff;
+    padding-bottom: 5px;
+}
 
-        .card {
-            background: var(--card-bg);
-            border: 1px solid #222;
-            border-radius: 4px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 15px;
+}
 
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--accent-color);
-        }
+/* Photocard */
+.photocard {
+    background: white;
+    padding: 5px;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+}
 
-        .card img {
-            width: 100%;
-            height: 360px;
-            object-fit: cover;
-            display: block;
-        }
+.photocard img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
 
-        /* Polaroid Style */
-        .card.polaroid { background: #fdfdfd; }
-        .polaroid-img { padding: 12px 12px 35px 12px; background: #fff; filter: contrast(105%); }
-        .card.polaroid h3 { color: #111; }
+/* Polaroid */
+.polaroid {
+    background: white;
+    padding: 10px;
+    color: black;
+    text-align: center;
+}
 
-        .card-info {
-            padding: 15px;
-            text-align: center;
-        }
+.polaroid img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
 
-        .card-info h3 { margin: 0; font-size: 0.85rem; letter-spacing: 1px; }
-        .card-info p { color: var(--text-dim); font-size: 0.7rem; margin: 8px 0 12px; }
+/* Merch */
+.card {
+    background: #111;
+    border: 1px solid #ff00ff;
+    padding: 10px;
+    text-align: center;
+}
 
-        .btn-collect {
-            background: transparent;
-            border: 1px solid var(--accent-color);
-            color: var(--accent-color);
-            padding: 6px 15px;
-            cursor: pointer;
-            font-family: 'Syncopate', sans-serif;
-            font-size: 0.6rem;
-            transition: all 0.3s;
-        }
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
 
-        .btn-collect:hover { background: var(--accent-color); color: white; }
+button {
+    margin-top: 5px;
+    padding: 6px;
+    border: none;
+    background: #ff00ff;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+}
 
-        footer { margin-top: 80px; padding: 40px; font-size: 0.65rem; color: #444; text-align: center; border-top: 1px solid #222; width: 100%; }
-    </style>
+.price {
+    color: #ff00ff;
+    font-weight: bold;
+}
+</style>
 </head>
+
 <body>
 
-    <h1>BADGRRRL SHOP</h1>
+<header>
+    <div>MEI – BADGRRRL</div>
+    <div>🛒 <span id="cart">0</span></div>
+</header>
 
-    <h2>OFFICIAL POLAROIDS</h2>
-    <div class="shop-container">
-        <div class="card polaroid"><img src="https://i.ibb.co/MyTwDDz/IMG-1168.jpg" class="polaroid-img"><div class="card-info"><h3>MEI POLO #01</h3><p>Analog Edition</p><button class="btn-collect">COLLECT</button></div></div>
-        <div class="card polaroid"><img src="https://i.ibb.co/ycr399h/IMG-1167.jpg" class="polaroid-img"><div class="card-info"><h3>MEI POLO #02</h3><p>Analog Edition</p><button class="btn-collect">COLLECT</button></div></div>
-        <div class="card polaroid"><img src="https://i.ibb.co/5XkS5vG/IMG-1161.jpg" class="polaroid-img"><div class="card-info"><h3>MEI POLO #03</h3><p>Analog Edition</p><button class="btn-collect">COLLECT</button></div></div>
-        <div class="card polaroid"><img src="https://i.ibb.co/rR9Wv0s/IMG-1160.jpg" class="polaroid-img"><div class="card-info"><h3>MEI POLO #04</h3><p>Analog Edition</p><button class="btn-collect">COLLECT</button></div></div>
-        <div class="card polaroid"><img src="https://i.ibb.co/C5W4m41/IMG-1159.jpg" class="polaroid-img"><div class="card-info"><h3>MEI POLO #05</h3><p>Analog Edition</p><button class="btn-collect">COLLECT</button></div></div>
-    </div>
+<script>
+let cart = 0;
+function addToCart(){
+    cart++;
+    document.getElementById("cart").innerText = cart;
+}
+</script>
 
-    <h2>SPECIAL COLLABORATIONS</h2>
-    <div class="shop-container">
-        <div class="card"><img src="https://i.ibb.co/yB7Ypgy/image.png"><div class="card-info"><h3>JENNIE x MEI</h3><p>Limited Postcard</p><button class="btn-collect">COLLECT</button></div></div>
-        <div class="card"><img src="https://i.ibb.co/whVnFfV/image.png"><div class="card-info"><h3>MEI x LISA</h3><p>Limited Postcard</p><button class="btn-collect">COLLECT</button></div></div>
-        <div class="card"><img src="https://i.ibb.co/x4CGpqZ/image.png"><div class="card-info"><h3>SANA x MEI</h3><p>Limited Postcard</p><button class="btn-collect">COLLECT</button></div></div>
-        <div class="card"><img src="https://i.ibb.co/wZDXGwd/image.png"><div class="card-info"><h3>WINTER x MEI</h3><p>Limited Postcard</p><button class="btn-collect">COLLECT</button></div></div>
-        <div class="card"><img src="https://i.ibb.co/3m5DJQy/image.png"><div class="card-info"><h3>YOONGI x MEI</h3><p>Limited Postcard</p><button class="btn-collect">COLLECT</button></div></div>
-        <div class="card"><img src="https://i.ibb.co/qf5xxgW/image.png"><div class="card-info"><h3>JISUNG x MEI</h3><p>Limited Postcard</p><button class="btn-collect">COLLECT</button></div></div>
-    </div>
+<section>
+<h2>Photocards</h2>
+<div class="grid">
+    <div class="photocard"><img src="https://i.ibb.co/L6V23Zz/image.png"><p>$8</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.ibb.co/m0ZzL9Z/image.png"><p>$9</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.ibb.co/pPzHk7n/image.png"><p>$9</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.ibb.co/v4S8L8T/image.png"><p>$10</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.ibb.co/GvYxbSL/image.png"><p>$10</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.ibb.co/RpLXGJ0/image.png"><p>$8</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.ibb.co/HfhfvRW/image.png"><p>$8</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.ibb.co/BH7tPqj/image.png"><p>$9</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.ibb.co/F4WzN4V/image.png"><p>$9</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.ibb.co/zHZgQ1g/image.png"><p>$10</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.ibb.co/Q31qY1v/image.png"><p>$10</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.ibb.co/60HH2RP/image.png"><p>$11</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.ibb.co/hRqGR4q/image.png"><p>$11</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.ibb.co/dJVhb7x/image.png"><p>$11</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.ibb.co/Dg8bmDF/image.png"><p>$11</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.ibb.co/N2Gndcs/image.png"><p>$12</p><button onclick="addToCart()">Add</button></div>
+    <div class="photocard"><img src="https://i.ibb.co/Y7F50Vp/image.png"><p>$12</p><button onclick="addToCart()">Add</button></div>
+</div>
+</section>
 
-    <h2>OFFICIAL MERCHANDISE</h2>
-    <div class="shop-container">
-        <div class="card"><img src="https://i.ibb.co/p6ghCCv/Untitled48-20260426012957.jpg"><div class="card-info"><h3>PHOTOBOOK</h3><p>Pinky Up 80p</p><button class="btn-collect">COLLECT</button></div></div>
-        <div class="card"><img src="https://i.ibb.co/VWSYfwR/Untitled48-20260426012957.jpg"><div class="card-info"><h3>POSTER SET</h3><p>A2 Premium</p><button class="btn-collect">COLLECT</button></div></div>
-        <div class="card"><img src="https://i.ibb.co/21QqfNL/Untitled48-20260426012957.jpg"><div class="card-info"><h3>PINKY UP ALBUM</h3><p>Physical Bundle</p><button class="btn-collect">COLLECT</button></div></div>
-        <div class="card"><img src="https://i.ibb.co/G4VzS24/Untitled49-20260426012940.png"><div class="card-info"><h3>SNAPBACK</h3><p>Mei Edition</p><button class="btn-collect">COLLECT</button></div></div>
-        <div class="card"><img src="https://i.ibb.co/NdVYjv8/Untitled49-20260426012807.png"><div class="card-info"><h3>TOUR T-SHIRT</h3><p>Oversized Fit</p><button class="
+<section>
+<h2>Polaroids & Collabs</h2>
+<div class="grid">
+    <div class="polaroid"><img src="https://i.ibb.co/yB7Ypgy/image.png"><p>Jennie & Mei</p><p>$18</p><button onclick="addToCart()">Add</button></div>
+    <div class="polaroid"><img src="https://i.ibb.co/whVnFfV/image.png"><p>Lisa & Mei</p><p>$20</p><button onclick="addToCart()">Add</button></div>
+    <div class="polaroid"><img src="https://i.ibb.co/x4CGpqZ/image.png"><p>Sana & Mei</p><p>$19</p><button onclick="addToCart()">Add</button></div>
+    <div class="polaroid"><img src="https://i.ibb.co/wZDXGwd/image.png"><p>Winter & Mei</p><p>$18</p><button onclick="addToCart()">Add</button></div>
+    <div class="polaroid"><img src="https://i.ibb.co/3m5DJQy/image.png"><p>Yoongi & Mei</p><p>$22</p><button onclick="addToCart()">Add</button></div>
+    <div class="polaroid"><img src="https://i.ibb.co/qf5xxgW/image.png"><p>Jisung & Mei</p><p>$19</p><button onclick="addToCart()">Add</button></div>
+    <div class="polaroid"><img src="https://i.ibb.co/MyTwDDz/IMG-1168.jpg"><p>Mei Solo</p><p>$16</p><button onclick="addToCart()">Add</button></div>
+    <div class="polaroid"><img src="https://i.ibb.co/ycr399h/IMG-1167.jpg"><p>Mei Solo</p><p>$16</p><button onclick="addToCart()">Add</button></div>
+    <div class="polaroid"><img src="https://i.ibb.co/5XkS5vG/IMG-1161.jpg"><p>Mei Solo</p><p>$15</p><button onclick="addToCart()">Add</button></div>
+    <div class="polaroid"><img src="https://i.ibb.co/rR9Wv0s/IMG-1160.jpg"><p>Mei Solo</p><p>$15</p><button onclick="addToCart()">Add</button></div>
+    <div class="polaroid"><img src="https://i.ibb.co/C5W4m41/IMG-1159.jpg"><p>Mei Solo</p><p>$15</p><button onclick="addToCart()">Add</button></div>
+</div>
+</section>
+
+<section>
+<h2>Official Merch</h2>
+<div class="grid">
+    <div class="card"><img src="https://i.ibb.co/p6ghCCv/Untitled48-20260426012957.jpg"><p>Official Photobook</p><p class="price">$25</p><button onclick="addToCart()">Add</button></div>
+    <div class="card"><img src="https://i.ibb.co/VWSYfwR/Untitled48-20260426012957.jpg"><p>Limited Poster</p><p class="price">$15</p><button onclick="addToCart()">Add</button></div>
+    <div class="card"><img src="https://i.ibb.co/21QqfNL/Untitled48-20260426012957.jpg"><p>BADGRRRL Album</p><p class="price">$30</p><button onclick="addToCart()">Add</button></div>
+    <div class="card"><img src="https://i.ibb.co/G4VzS24/Untitled49-20260426012940.png"><p>Badgrrrl Snapback</p><p class="price">$25</p><button onclick="addToCart()">Add</button></div>
+    <div class="card"><img src="https://i.ibb.co/NdVYjv8/Untitled49-20260426012807.png"><p>I AM ART Tshirt</p><p class="price">$35</p><button onclick="addToCart()">Add</button></div>
+    <div class="card"><img src="https://i.ibb.co/Pywj53K/IMG-1115.jpg"><p>Eyewear & Case</p><p class="price">$45</p><button onclick="addToCart()">Add</button></div>
+    <div class="card"><img src="https://i.ibb.co/Gfn4RbJj/IMG-1116.jpg"><p>Official Keychain</p><p class="price">$15</p><button onclick="addToCart()">Add</button></div>
+</div>
+</section>
+
+</body>
+</html>
