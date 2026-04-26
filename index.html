@@ -32,13 +32,13 @@
             text-align: center;
         }
 
-        h1 { font-size: 2.5rem; margin-bottom: 10px; border-bottom: 2px solid var(--accent-color); padding-bottom: 10px; }
-        h2 { font-size: 1.3rem; margin: 60px 0 30px; color: var(--accent-color); width: 100%; max-width: 1200px; border-left: 4px solid var(--accent-color); padding-left: 15px; }
+        h1 { font-size: 2.2rem; margin-bottom: 10px; border-bottom: 2px solid var(--accent-color); padding-bottom: 10px; }
+        h2 { font-size: 1.2rem; margin: 50px 0 25px; color: var(--accent-color); width: 100%; max-width: 1200px; border-left: 4px solid var(--accent-color); padding-left: 15px; }
 
         .shop-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 25px;
             width: 100%;
             max-width: 1200px;
         }
@@ -48,106 +48,77 @@
             border: 1px solid #222;
             border-radius: 4px;
             overflow: hidden;
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
         }
 
         .card:hover {
             transform: translateY(-5px);
             border-color: var(--accent-color);
-            box-shadow: 0 10px 20px rgba(255, 0, 85, 0.2);
         }
 
         .card img {
             width: 100%;
-            height: 380px;
+            height: 360px;
             object-fit: cover;
             display: block;
         }
 
+        /* Polaroid Style */
+        .card.polaroid { background: #fdfdfd; }
+        .polaroid-img { padding: 12px 12px 35px 12px; background: #fff; filter: contrast(105%); }
+        .card.polaroid h3 { color: #111; }
+
         .card-info {
-            padding: 20px;
+            padding: 15px;
             text-align: center;
         }
 
-        .card-info h3 {
-            margin: 0;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .card-info p {
-            color: var(--text-dim);
-            font-size: 0.7rem;
-            margin: 10px 0 15px;
-        }
+        .card-info h3 { margin: 0; font-size: 0.85rem; letter-spacing: 1px; }
+        .card-info p { color: var(--text-dim); font-size: 0.7rem; margin: 8px 0 12px; }
 
         .btn-collect {
             background: transparent;
             border: 1px solid var(--accent-color);
             color: var(--accent-color);
-            padding: 8px 18px;
+            padding: 6px 15px;
             cursor: pointer;
             font-family: 'Syncopate', sans-serif;
             font-size: 0.6rem;
             transition: all 0.3s;
         }
 
-        .btn-collect:hover {
-            background: var(--accent-color);
-            color: white;
-        }
+        .btn-collect:hover { background: var(--accent-color); color: white; }
 
-        /* Polaroid Style Override */
-        .polaroid-img { padding: 15px 15px 40px 15px; background: #fff; }
-        .card.polaroid { background: #fdfdfd; }
-        .card.polaroid h3 { color: #111; }
-
-        footer {
-            margin-top: 100px;
-            padding: 50px;
-            font-size: 0.7rem;
-            color: #555;
-            text-align: center;
-            width: 100%;
-            border-top: 1px solid #222;
-        }
+        footer { margin-top: 80px; padding: 40px; font-size: 0.65rem; color: #444; text-align: center; border-top: 1px solid #222; width: 100%; }
     </style>
 </head>
 <body>
 
     <h1>BADGRRRL SHOP</h1>
-    <p style="color: var(--text-dim); font-size: 0.8rem;">AUSTIN CC x SEOUL | OFFICIAL MERCH</p>
-
-    <h2>OFFICIAL MERCHANDISE</h2>
-    <div class="shop-container">
-        <div class="card"><img src="https://i.ibb.co/p6ghCCvs/Untitled48-20260426012957.jpg" alt="Photobook"><div class="card-info"><h3>PINKY UP PHOTOBOOK</h3><p>Limited Edition 80p</p><button class="btn-collect">COLLECT</button></div></div>
-        <div class="card"><img src="https://i.ibb.co/VWSYfwRV/Untitled48-20260426012957.jpg" alt="Poster"><div class="card-info"><h3>OFFICIAL POSTER SET</h3><p>A2 Premium Silk</p><button class="btn-collect">COLLECT</button></div></div>
-        <div class="card"><img src="https://i.ibb.co/21QqfNLD/Untitled48-20260426012957.jpg" alt="Album"><div class="card-info"><h3>PINKY UP - THE ALBUM</h3><p>Digital + Physical Bundle</p><button class="btn-collect">COLLECT</button></div></div>
-        <div class="card"><img src="https://i.ibb.co/G4VzS24X/Untitled49-20260426012940.png" alt="Cap"><div class="card-info"><h3>BADGRRRL SNAPBACK</h3><p>Embroidered Black</p><button class="btn-collect">COLLECT</button></div></div>
-        <div class="card"><img src="https://i.ibb.co/NdVYjv8Y/Untitled49-20260426012807.png" alt="Tshirt"><div class="card-info"><h3>PINKY UP TOUR TEE</h3><p>Oversized Fit</p><button class="btn-collect">COLLECT</button></div></div>
-        <div class="card"><img src="https://i.ibb.co/Pywj53K/IMG-1115.jpg" alt="Glasses & Case"><div class="card-info"><h3>CYBER EYEWEAR + CASE</h3><p>Mei's Signature Look</p><button class="btn-collect">COLLECT</button></div></div>
-        <div class="card"><img src="https://i.ibb.co/Gfn4RbJj/IMG-1116.jpg" alt="Keychain"><div class="card-info"><h3>PINKY UP KEYCHAIN</h3><p>Acrylic & Steel</p><button class="btn-collect">COLLECT</button></div></div>
-    </div>
 
     <h2>OFFICIAL POLAROIDS</h2>
     <div class="shop-container">
-        <div class="card polaroid"><img src="https://i.ibb.co/MyTwDDz3/IMG-1168.jpg" class="polaroid-img" alt="Polo"><div class="card-info"><h3>MEI POLO #01</h3><p>Analog Set</p><button class="btn-collect">COLLECT</button></div></div>
-        <div class="card polaroid"><img src="https://i.ibb.co/ycr399ht/IMG-1167.jpg" class="polaroid-img" alt="Polo"><div class="card-info"><h3>MEI POLO #02</h3><p>Analog Set</p><button class="btn-collect">COLLECT</button></div></div>
-        <div class="card polaroid"><img src="https://i.ibb.co/5XkS5vG7/IMG-1161.jpg" class="polaroid-img" alt="Polo"><div class="card-info"><h3>MEI POLO #03</h3><p>Analog Set</p><button class="btn-collect">COLLECT</button></div></div>
+        <div class="card polaroid"><img src="https://i.ibb.co/MyTwDDz/IMG-1168.jpg" class="polaroid-img"><div class="card-info"><h3>MEI POLO #01</h3><p>Analog Edition</p><button class="btn-collect">COLLECT</button></div></div>
+        <div class="card polaroid"><img src="https://i.ibb.co/ycr399h/IMG-1167.jpg" class="polaroid-img"><div class="card-info"><h3>MEI POLO #02</h3><p>Analog Edition</p><button class="btn-collect">COLLECT</button></div></div>
+        <div class="card polaroid"><img src="https://i.ibb.co/5XkS5vG/IMG-1161.jpg" class="polaroid-img"><div class="card-info"><h3>MEI POLO #03</h3><p>Analog Edition</p><button class="btn-collect">COLLECT</button></div></div>
+        <div class="card polaroid"><img src="https://i.ibb.co/rR9Wv0s/IMG-1160.jpg" class="polaroid-img"><div class="card-info"><h3>MEI POLO #04</h3><p>Analog Edition</p><button class="btn-collect">COLLECT</button></div></div>
+        <div class="card polaroid"><img src="https://i.ibb.co/C5W4m41/IMG-1159.jpg" class="polaroid-img"><div class="card-info"><h3>MEI POLO #05</h3><p>Analog Edition</p><button class="btn-collect">COLLECT</button></div></div>
     </div>
 
     <h2>SPECIAL COLLABORATIONS</h2>
     <div class="shop-container">
-        <div class="card"><img src="https://i.ibb.co/yB7Ypgy/image.png" alt="Jennie"><div class="card-info"><h3>JENNIE x MEI</h3><p>Limited Postcard</p><button class="btn-collect">COLLECT</button></div></div>
-        <div class="card"><img src="https://i.ibb.co/whVnFfV/image.png" alt="Lisa"><div class="card-info"><h3>MEI x LISA</h3><p>Limited Postcard</p><button class="btn-collect">COLLECT</button></div></div>
-        <div class="card"><img src="https://i.ibb.co/3m5DJQy/image.png" alt="Yoongi"><div class="card-info"><h3>YOONGI x MEI</h3><p>Limited Postcard</p><button class="btn-collect">COLLECT</button></div></div>
+        <div class="card"><img src="https://i.ibb.co/yB7Ypgy/image.png"><div class="card-info"><h3>JENNIE x MEI</h3><p>Limited Postcard</p><button class="btn-collect">COLLECT</button></div></div>
+        <div class="card"><img src="https://i.ibb.co/whVnFfV/image.png"><div class="card-info"><h3>MEI x LISA</h3><p>Limited Postcard</p><button class="btn-collect">COLLECT</button></div></div>
+        <div class="card"><img src="https://i.ibb.co/x4CGpqZ/image.png"><div class="card-info"><h3>SANA x MEI</h3><p>Limited Postcard</p><button class="btn-collect">COLLECT</button></div></div>
+        <div class="card"><img src="https://i.ibb.co/wZDXGwd/image.png"><div class="card-info"><h3>WINTER x MEI</h3><p>Limited Postcard</p><button class="btn-collect">COLLECT</button></div></div>
+        <div class="card"><img src="https://i.ibb.co/3m5DJQy/image.png"><div class="card-info"><h3>YOONGI x MEI</h3><p>Limited Postcard</p><button class="btn-collect">COLLECT</button></div></div>
+        <div class="card"><img src="https://i.ibb.co/qf5xxgW/image.png"><div class="card-info"><h3>JISUNG x MEI</h3><p>Limited Postcard</p><button class="btn-collect">COLLECT</button></div></div>
     </div>
 
-    <footer>
-        &copy; 2026 BADGRRRL ENTERTAINMENT. ALL RIGHTS RESERVED.<br>
-        POWERED BY GITHUB PAGES | DESIGNED BY MEI
-    </footer>
-
-</body>
-</html>
+    <h2>OFFICIAL MERCHANDISE</h2>
+    <div class="shop-container">
+        <div class="card"><img src="https://i.ibb.co/p6ghCCv/Untitled48-20260426012957.jpg"><div class="card-info"><h3>PHOTOBOOK</h3><p>Pinky Up 80p</p><button class="btn-collect">COLLECT</button></div></div>
+        <div class="card"><img src="https://i.ibb.co/VWSYfwR/Untitled48-20260426012957.jpg"><div class="card-info"><h3>POSTER SET</h3><p>A2 Premium</p><button class="btn-collect">COLLECT</button></div></div>
+        <div class="card"><img src="https://i.ibb.co/21QqfNL/Untitled48-20260426012957.jpg"><div class="card-info"><h3>PINKY UP ALBUM</h3><p>Physical Bundle</p><button class="btn-collect">COLLECT</button></div></div>
+        <div class="card"><img src="https://i.ibb.co/G4VzS24/Untitled49-20260426012940.png"><div class="card-info"><h3>SNAPBACK</h3><p>Mei Edition</p><button class="btn-collect">COLLECT</button></div></div>
+        <div class="card"><img src="https://i.ibb.co/NdVYjv8/Untitled49-20260426012807.png"><div class="card-info"><h3>TOUR T-SHIRT</h3><p>Oversized Fit</p><button class="
